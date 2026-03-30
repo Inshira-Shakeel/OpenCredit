@@ -9,7 +9,11 @@ Welcome to OpenCredit, a powerful and scalable digital lending platform designed
 
 This document provides a complete overview of the OpenCredit platform, including its solution architecture, core modules, and transaction flows across multiple channels and integrations.
 
-## Solution Architecture
+## The Complete Lending Blueprint
+
+[Watch on Vimeo](https://vimeo.com/1178435530?share=copy&fl=sv&fe=ci)
+
+## OpenCredit Architecture
 
 OpenCredit delivers a comprehensive modular architecture to support the full digital lending lifecycle. It includes a loan origination engine, loan management system (LMS), middleware switch for integrations, and API gateway for seamless connectivity with internal and external systems.
 
