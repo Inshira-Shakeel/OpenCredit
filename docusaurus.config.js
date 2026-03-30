@@ -7,7 +7,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Inshira-Shakeel', // Usually your GitHub org/user name.
+  organizationName: 'Inshira-Shakeel',
   projectName: 'OpenCredit',
   deploymentBranch: 'gh-pages',
 
@@ -15,7 +15,7 @@ const config = {
     [
       'classic',
       {
-        docs: false, // We will handle docs via plugins
+        docs: false, // docs handled via plugins
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/index.css'),
@@ -25,7 +25,25 @@ const config = {
   ],
 
   plugins: [
-    // Overview plugin
+    // OpenAPI plugin
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'api',
+        config: {
+          opencredit: {
+            specPath: 'docs/API/opencredit-api.yaml', // your YAML path
+            outputDir: 'docs/API/api-generated',       // where MD/MDX will go
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
+    ],
+
+    // Overview
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -36,7 +54,7 @@ const config = {
       },
     ],
 
-    // API plugin
+    // API docs
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -47,7 +65,7 @@ const config = {
       },
     ],
 
-    // Backoffice plugin
+    // Backoffice
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -58,7 +76,7 @@ const config = {
       },
     ],
 
-    // Functional Specs plugin
+    // Functional Specs
     [
       '@docusaurus/plugin-content-docs',
       {
