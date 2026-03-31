@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkdao=globalThis.webpackChunkdao||[]).push([[1903],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/OpenDigital/blog","blogTitle":"Blog","authorsListPath":"/OpenDigital/blog/authors"}')}}]);
